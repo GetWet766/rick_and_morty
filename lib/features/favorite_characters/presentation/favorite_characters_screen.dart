@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty/widgets/character_card.dart';
 
 class FavoriteCharactersScreen extends StatelessWidget {
   FavoriteCharactersScreen({super.key});
@@ -10,26 +11,9 @@ class FavoriteCharactersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Избранное")),
       body: ListView.separated(
+        padding: EdgeInsets.all(12),
         itemBuilder: (context, index) {
-          return Card(
-            child: Padding(
-              padding: EdgeInsetsGeometry.all(12),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      /// Image
-                      // Image.network("src")
-                      /// Name
-                      Text("Rick"),
-
-                      ///
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          );
+          return CharacterCard();
         },
         separatorBuilder: (context, index) {
           return SizedBox(height: 12);

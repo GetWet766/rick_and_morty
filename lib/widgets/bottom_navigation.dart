@@ -20,19 +20,19 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: onDestinationSelected,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(Icons.home_rounded),
             label: 'Список персонажей',
           ),
-          NavigationDestination(icon: Icon(Icons.favorite), label: 'Избранное'),
+          NavigationDestination(
+            icon: Icon(Icons.star_rounded),
+            label: 'Избранное',
+          ),
         ],
       ),
       body: widget.screens[currentPageIndex],
