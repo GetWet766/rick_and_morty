@@ -1,16 +1,25 @@
-# rick_and_mortie
+# Rick & Morty (Flutter)
 
-A new Flutter project.
+Функционал:
 
-## Getting Started
+- Главный экран со списком карточек персонажей (изображение, имя, статус, вид, локация), кнопка «Добавить в избранное».
+- Экран «Избранное» со списком избранных, сортировка (по имени, по статусу), удаление свайпом.
+- BottomNavigationBar (Material 3 NavigationBar).
+- Пагинация (ленивая подгрузка при скролле).
+- Кеширование данных в Hive (оффлайн: при ошибке сети показываются данные из кеша).
+- Избранное хранится в Hive (Box `favorites`).
+- Тёмная тема с переключателем в AppBar.
+- Небольшая анимация при добавлении/удалении избранного.
+- Кэш изображений (cached_network_image) — картинки доступны в оффлайне после первой загрузки.
 
-This project is a starting point for a Flutter application.
+## Сборка и запуск
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Примечания по оффлайн-режиму
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Данные персонажей кэшируются по идентификатору `id` в Box `characters` (как JSON Map).
+- Картинки кэшируются через `cached_network_image` (поддержка оффлайн-доступа).

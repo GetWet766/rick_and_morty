@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({super.key, required this.screens});
-
   final List<Widget> screens;
+
+  const BottomNavigation({super.key, required this.screens});
 
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
@@ -26,7 +26,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            icon: Icon(Icons.home_rounded),
+            icon: Icon(Icons.list_rounded),
             label: 'Список персонажей',
           ),
           NavigationDestination(

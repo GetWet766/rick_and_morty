@@ -1,5 +1,5 @@
 name: rick_and_morty
-description: 'A new Flutter project.'
+description: 'Rick & Morty — список персонажей с избранным и оффлайн-кэшем'
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -12,7 +12,10 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  flutter_bloc: ^9.1.1
+  http: ^1.2.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
